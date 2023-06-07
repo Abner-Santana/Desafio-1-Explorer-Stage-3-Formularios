@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1 - Recriando Formulários</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Avalie a sua mentoria</h1>
+            <p>Chegou a hora de avaliar o seu mentor. Bora lá?</p>
+
+            <div class="icon"></div>
+        </header>
+
+        <form id="my-form">
+
+            <fieldset>
+                <!--Foi criado essa classe porque no chrome o legend nao entra como aceita margins internas-->
+                <div class="fieldset-wrapper">
+
+                    <div class="col-2">
+                        <div class="input-wrapper">
+                            <label for="event-nome">Nome</label>
+                            <input 
+                                type="text" 
+                                id="event-nome" 
+                                required/>
+                        </div>
+    
+                        <div class="input-wrapper">
+                            <label for="event-sobrenome">Sobrenome</label>
+                            <input 
+                                type="text" 
+                                id="event-sobrenome" 
+                                required/>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="event-email">Email <span>(digite um email válido)</span></label>
+                        <input 
+                            type="email" 
+                            id="event-email" 
+                            required/>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <!--Foi criado essa classe porque no chrome o legend nao entra como aceita margins internas-->
+                <div class="fieldset-wrapper">
+                    <legend>Informações do mentor</legend>
+                    
+                    <div class="input-wrapper">
+                        <label for="event-teacher">Selecione quem foi o seu mentor</label>
+                        <select id="event-teacher">
+                            <option value="Professor1">Professor 1</option>
+                            <option value="Professor2">Professor 2</option>
+                            <option value="Professor3">Professor 3</option>
+                        </select>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="event-feedback">Feedback sobre o mentor</label>
+                        <textarea id="event-feedback" ></textarea>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="event-doubts"/>
+                        <label for="event-doubts">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <!--Foi criado essa classe porque no chrome o legend nao entra como aceita margins internas-->
+                <div class="fieldset-wrapper">
+                    <legend>Agendando próxima mentoria</legend>
+
+                    <div class="col-3">
+                        <div class="input-wrapper">
+                            <label for="input-date">Data <span>(DD/MM/AAAA)</span></label>
+                            <input type="date" id="input-date">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="input-das">Das</label>
+                            <input type="time" id="input-das">
+                        </div>
+
+                        <div class="input-wrapper">
+                            <label for="input-ate">Até</label>
+                            <input type="time" id="input-ate">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <div class="fieldset-wrapper">
+                    <div class="input-wrapper">
+                        <input 
+                                class="button" 
+                                type="submit" 
+                                form="my-form"
+                                value="Salvar">
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
