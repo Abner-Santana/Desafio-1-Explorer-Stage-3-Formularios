@@ -90,7 +90,7 @@ form::before{
 
 form{
     margin-top: 32px;
-    margin-bottom: 32px;
+    margin-bottom: 64px;
     width: 750px;
     min-height: 500px;
 
